@@ -1,29 +1,17 @@
 # PalindromCheckerApp
-USE CASE 1 : Application Entry and Welcome Message
-
-### Running Procedure
-JVM starts execution from main(String[] args)
-Application prints welcome message
-Displays version information
-Shows system initialization confirmation
-Program terminates
-
-### Flow of Project
-
-Start Program -
-Execute main()-
-Print Welcome Message-
-Print Version-
-Print Initialization Status-
-End
-
-### Objective
-
-The objective of this stage is:
-To establish a proper application entry point
-To verify system initialization.
-
-### Topics Covered in This Code
-
+* Use Case 2: Hardcoded Palindrome Validation
+*
+* Description:
+* This class demonstrates basic palindrome validation
+* using a predefined (hardcoded) string value.
+*
+* At this stage, the application:
+* - Stores a predefined string
+* - Compares characters from both ends
+* - Determines whether the string is a palindrome
+* - Displays the result on the console
+*
+* This use case introduces fundamental comparison logic
+* before using advanced data structures.
 output using System.out.println()
 
