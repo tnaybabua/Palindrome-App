@@ -9,16 +9,25 @@
 public class PalindromeCheckerApp {
     public static void main(String args[]){
        String name = "madam";
-
+        String copy = "";
+        int len = name.length()-1;
        boolean ispalindrome = true;
-       int len = name.length() -1;
-       for(int i = 0 ; i<(len/2) ; i++){
-           if(name.charAt(i) != name.charAt(len-i)){
-               ispalindrome =  false;
-           }
+
+       //reversing
+       for(int i = 0 ; i<=len; i++){
+           copy+= name.charAt(len-i);
        }
 
-       System.out.println("Is it a Palindrome? : " + ispalindrome);
+       //checking for palindrome
+        for(int i = 0 ; i<=len ; i++){
+            if(name.charAt(i) != copy.charAt(i)){
+                ispalindrome = false;
+            }
+        }
+
+
+        System.out.println("Is it palindrome = " + ispalindrome);
+
 
 
 

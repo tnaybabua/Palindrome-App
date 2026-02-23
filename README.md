@@ -1,17 +1,13 @@
 # PalindromCheckerApp
-* Use Case 2: Hardcoded Palindrome Validation
-*
+* Use Case 2: Palindrome Check Using String Reverse
+
 * Description:
 * This class demonstrates basic palindrome validation
-* using a predefined (hardcoded) string value.
-*
+* using reversing string and Comaparing with orginal 
 * At this stage, the application:
-* - Stores a predefined string
-* - Compares characters from both ends
+* - Reverse the Orignal String 
+* - Stores a that revserd string to copy string
+* - Compares characters of both orginal and reversed String
 * - Determines whether the string is a palindrome
 * - Displays the result on the console
-*
-* This use case introduces fundamental comparison logic
-* before using advanced data structures.
-output using System.out.println()
 
