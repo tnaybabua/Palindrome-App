@@ -1,5 +1,5 @@
 # PalindromCheckerApp
-* Use Case 2: Palindrome Check Using String Reverse
+* Use Case 3: Palindrome Check Using String Reverse
 
 * Description:
 * This class demonstrates basic palindrome validation
