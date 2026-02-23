@@ -1,10 +1,8 @@
 # PalindromCheckerApp
 * Use Case 2: Hardcoded Palindrome Validation
-*
 * Description:
 * This class demonstrates basic palindrome validation
 * using a predefined (hardcoded) string value.
-*
 * At this stage, the application:
 * - Stores a predefined string
 * - Compares characters from both ends
