@@ -25,7 +25,7 @@ public class PalindromeCheckerApp {
             }
         }
 
-
+        System.out.println("Input = " + name);
         System.out.println("Is it palindrome = " + ispalindrome);
 
 
