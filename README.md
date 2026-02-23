@@ -3,7 +3,7 @@
 
 * Description:
 * This class demonstrates basic palindrome validation
-* using reversing string and Comaparing with orginal 
+* using creating staart and end 
 * At this stage, the application:
 * - Reverse the Orignal String 
 * - Stores a that revserd string to copy string

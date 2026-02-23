@@ -9,21 +9,19 @@
 public class PalindromeCheckerApp {
     public static void main(String args[]){
        String name = "madam";
-        String copy = "";
-        int len = name.length()-1;
+       int start = 0;
+       int end = name.length()-1;
+
        boolean ispalindrome = true;
 
-       //reversing
-       for(int i = 0 ; i<=len; i++){
-           copy+= name.charAt(len-i);
-       }
-
-       //checking for palindrome
-        for(int i = 0 ; i<=len ; i++){
-            if(name.charAt(i) != copy.charAt(i)){
+        while(start<=end){
+            if(name.charAt(start) != name.charAt(end)){
                 ispalindrome = false;
             }
+            start++;
+            end--;
         }
+
 
         System.out.println("Input = " + name);
         System.out.println("Is it palindrome = " + ispalindrome);
