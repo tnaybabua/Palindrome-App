@@ -1,6 +1,6 @@
 
 
-//@author Rahul
+//@author Rahul Tanay
 //@version 1.0
 
 public class PalindromeCheckerApp {
