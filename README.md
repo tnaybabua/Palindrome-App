@@ -7,4 +7,4 @@ Description:
 * Captures execution end time
 * Calculates time taken for each approach
 * Displays both results and execution time on the console
-* Enables basic algorithm performance comparison
+* Enables basic algorithm performance comparison.
