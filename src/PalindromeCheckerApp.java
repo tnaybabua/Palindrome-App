@@ -1,30 +1,34 @@
 //
 //
 ////@author Rahul Tanay
-////@version 3.0
+////@version 4.0
 //
 
 
-
+import java.util.*;
 public class PalindromeCheckerApp {
     public static void main(String args[]){
-       String name = "madam";
-       int start = 0;
-       int end = name.length()-1;
+        String str = "madam";
+        Stack<Character> stack = new Stack<>();
 
-       boolean ispalindrome = true;
-
-        while(start<=end){
-            if(name.charAt(start) != name.charAt(end)){
-                ispalindrome = false;
-            }
-            start++;
-            end--;
+        //pushing
+        for (int i = 0; i < str.length(); i++) {
+            stack.push(str.charAt(i));
         }
 
+        String reversed = "";
 
-        System.out.println("Input = " + name);
-        System.out.println("Is it palindrome = " + ispalindrome);
+        //poping
+        while (!stack.isEmpty()) {
+            reversed += stack.pop();
+        }
+
+        //compare before and after
+        if (str.equals(reversed)) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
 
 
 
