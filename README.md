@@ -1,14 +1,15 @@
 # PalindromCheckerApp
-* Use Case 6: Palindrome Check Using Stacks and queue .
+* Use Case 7: Palindrome Check Using dequeue (optimised) .
 
 * Description:
 * This class demonstrates basic palindrome validation
-* using creating stacks and queues 
-* At this stage, the application:
-* - Push all char of String to Stack and queue 
-*- until the stack is empty.
-* - then just each element from stack while removing each element from queue
-* - Compares characters of both orginal and reversed String
+* using creating dequeue
+* **At this stage, the application:
+* - Push all char of String to dequeue
+* - take 2 varible first and last 
+* - varible 1 first = dequeue from front 
+* - varible 2 last = dequeue from last 
+* - Compares characters of both first and last
 * - Determines whether the string is a palindrome
 * - Displays the result on the console
 
