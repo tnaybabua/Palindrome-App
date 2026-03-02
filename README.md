@@ -1,7 +1,5 @@
-* -Use Case 9: Palindrome Check Using Recursion.
-
-* -Description:
-
+Use Case 9: Palindrome Check Using Recursion.
+* Description:
 * -This class demonstrates palindrome validation
 * -using recursive function
 * -At this stage, the application:
