@@ -1,47 +1,74 @@
 //
 //
 ////@author Rahul Tanay
-////@version 5.0
+////@version 8.0
 //
 
 
 import java.util.*;
 public class PalindromeCheckerApp {
-    public static void main(String args[]){
 
-        String str = "madam";
 
-        Deque<Character> deque = new ArrayDeque<>();
+    // Node class with constrctor
+    static class Node {
+        char data;
+        Node next;
 
-        // pushing characters into deque
-        for (int i = 0; i < str.length(); i++) {
-            deque.addLast(str.charAt(i));
+        Node(char data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+
+    static Node buildList(String str) {
+
+        Node head = new Node(str.charAt(0));
+        Node current = head;
+
+        for (int i = 1; i < str.length(); i++) {
+            current.next = new Node(str.charAt(i));
+            current = current.next;
         }
 
-        boolean isPalindrome = true;
+        return head;
+    }
 
-        // Compare front and back
-        while (deque.size() > 1) {
+    static boolean isPalindrome(Node head, int size) {
 
-            char front = deque.removeFirst();
-            char back = deque.removeLast();
+        char[] arr = new char[size];
 
-            if (front != back) {
-                isPalindrome = false;
-                break;
+        Node current = head;
+
+        // Copy linked list into array (normal for loop)
+        for (int i = 0; i < size; i++) {
+            arr[i] = current.data;
+            current = current.next;
+        }
+
+        // Check palindrome using normal for loop
+        for (int i = 0; i < size / 2; i++) {
+            if (arr[i] != arr[size - 1 - i]) {
+                return false;
             }
         }
 
-        if (isPalindrome)
-            System.out.println("Palindrome");
-        else
-            System.out.println("Not Palindrome");
+        return true;
+    }
 
-        }
+    public static void main(String args[]) {
 
+        String input = "level";
 
+        Node head = buildList(input);
+
+        boolean result = isPalindrome(head, input.length());
+
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + result);
 
 
     }
+}
 
 
