@@ -1,11 +1,10 @@
-Use Case 10: Case-Insensitive & Space-Ignored Recursive Palindrome Check.
+Use Case 11: Object-Oriented Palindrome Service
 
 Description:
-* This class demonstrates palindrome validation
-* ignoring case differences and spaces
+* This application encapsulates palindrome logic
+* inside a separate PalindromeChecker class
 * At this stage, the application:
-* Takes default input string
-* Converts string to lowercase
-* Removes spaces
-* Recursively compares first and last characters
-* Displays the result on the console
+* Creates PalindromeChecker class
+* Exposes checkPalindrome() method
+* Uses internal Stack data structure
+* Main method only calls the service
