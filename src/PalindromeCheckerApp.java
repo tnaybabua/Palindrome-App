@@ -25,7 +25,7 @@ public class PalindromeCheckerApp {
 
     public static void main(String args[]) {
 
-        String input = "level";
+        String input = "madam";
 
         boolean result = isPalindrome(input, 0, input.length() - 1);
 
