@@ -5,47 +5,65 @@
 //
 
 import java.util.*;
-    class PalindromeChecker {
+// (Interface)
+interface PalindromeStrategy {
+    boolean check(String input);
+}
 
-        public boolean checkPalindrome(String input) {
+//  Stack  Method
+class StackStrategy implements PalindromeStrategy {
 
-            if (input == null)
+    public boolean check(String input) {
+
+        Stack<Character> stack = new Stack<>();
+
+        for (int i = 0; i < input.length(); i++)
+            stack.push(input.charAt(i));
+
+        for (int i = 0; i < input.length(); i++)
+            if (input.charAt(i) != stack.pop())
                 return false;
 
-            input = input.toLowerCase().replace(" ", "");
-
-            Stack<Character> stack = new Stack<>();
-
-            // Push characters
-            for (int i = 0; i < input.length(); i++) {
-                stack.push(input.charAt(i));
-            }
-
-            // Compare
-            for (int i = 0; i < input.length(); i++) {
-                if (input.charAt(i) != stack.pop()) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
+        return true;
+    }
 }
+
+//  Deque Method
+class DequeStrategy implements PalindromeStrategy {
+
+    public boolean check(String input) {
+
+        Deque<Character> deque = new ArrayDeque<>();
+
+        for (int i = 0; i < input.length(); i++)
+            deque.addLast(input.charAt(i));
+
+        while (deque.size() > 1)
+            if (deque.removeFirst() != deque.removeLast())
+                return false;
+
+        return true;
+    }
+}
+
+
     public class PalindromeCheckerApp {
         public static void main(String args[]) {
             Scanner sc = new Scanner(System.in);
             System.out.println("input");
             String input = sc.nextLine();
 
-            PalindromeChecker checkObj = new PalindromeChecker();
+            PalindromeStrategy strategy = new StackStrategy();
+            // PalindromeStrategy strategy = new DequeStrategy();
 
-            boolean result = checkObj.checkPalindrome(input);
+            boolean result =  strategy.check(input);
 
             System.out.println("Input : " + input);
+            System.out.println("Method Used : " + strategy.getClass().getSimpleName());
             System.out.println("Is Palindrome? : " + result);
 
 
         }
-}
+    }
 
 
