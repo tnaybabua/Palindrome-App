@@ -1,7 +1,7 @@
 //
 //
 ////@author Rahul Tanay
-////@version 12.0
+////@version 13.0
 //
 
 import java.util.*;
@@ -53,15 +53,30 @@ class DequeStrategy implements PalindromeStrategy {
             System.out.println("input");
             String input = sc.nextLine();
 
-            PalindromeStrategy strategy = new StackStrategy();
-            // PalindromeStrategy strategy = new DequeStrategy();
+            //  Stack Performance
+            PalindromeStrategy stackStrategy = new StackStrategy();
+            long start1 = System.nanoTime();
+            boolean stackResult = stackStrategy.check(input);
+            long end1 = System.nanoTime();
+            long stackTime = end1 - start1;
 
-            boolean result =  strategy.check(input);
+            // Deque Performance
+            PalindromeStrategy dequeStrategy = new DequeStrategy();
+            long start2 = System.nanoTime();
+            boolean dequeResult = dequeStrategy.check(input);
+            long end2 = System.nanoTime();
+            long dequeTime = end2 - start2;
 
             System.out.println("Input : " + input);
-            System.out.println("Method Used : " + strategy.getClass().getSimpleName());
-            System.out.println("Is Palindrome? : " + result);
+            System.out.println();
 
+            System.out.println("Stack Result : " + stackResult);
+            System.out.println("Stack Time   : " + stackTime + " ns");
+
+            System.out.println();
+
+            System.out.println("Deque Result : " + dequeResult);
+            System.out.println("Deque Time   : " + dequeTime + " ns");
 
         }
     }
