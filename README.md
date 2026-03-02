@@ -1,11 +1,10 @@
-Use Case 12: Strategy Pattern for Palindrome Algorithms (Advanced)
+UC13: Performance Comparison of Palindrome Algorithms
 
 Description:
-* This application demonstrates dynamic selection
-* of palindrome checking algorithms using Strategy Pattern
-* At this stage, the application:
-* Defines PalindromeStrategy interface
-* Implements StackStrategy and DequeStrategy
-* Injects strategy at runtime
-* Uses polymorphism
-* Displays result on console
+* Runs multiple palindrome algorithms (Stack, Deque)
+* Captures execution start time using System.nanoTime()
+* Executes each algorithm
+* Captures execution end time
+* Calculates time taken for each approach
+* Displays both results and execution time on the console
+* Enables basic algorithm performance comparison
