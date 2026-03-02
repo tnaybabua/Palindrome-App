@@ -9,37 +9,39 @@ import java.util.*;
 public class PalindromeCheckerApp {
     public static void main(String args[]){
 
-            String str = "madam";
+        String str = "madam";
 
-            Stack<Character> stack = new Stack<>();
-            Queue<Character> queue = new LinkedList<>();
+        Deque<Character> deque = new ArrayDeque<>();
 
-            // pushing char from string to both stack and queue
-            for (int i = 0; i < str.length(); i++) {
-                char ch = str.charAt(i);
-                stack.push(ch);
-                queue.add(ch);
+        // pushing characters into deque
+        for (int i = 0; i < str.length(); i++) {
+            deque.addLast(str.charAt(i));
+        }
+
+        boolean isPalindrome = true;
+
+        // Compare front and back
+        while (deque.size() > 1) {
+
+            char front = deque.removeFirst();
+            char back = deque.removeLast();
+
+            if (front != back) {
+                isPalindrome = false;
+                break;
             }
+        }
 
-            boolean isPalindrome = true;
+        if (isPalindrome)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
 
-            // Compare elements
-            while (!stack.isEmpty()) {
-                if (stack.pop() != queue.remove()) {
-                    isPalindrome = false;
-                    break;
-                }
-            }
-
-            if (isPalindrome)
-                System.out.println("Palindrome");
-            else
-                System.out.println("Not Palindrome");
         }
 
 
 
 
     }
-}
+
 
