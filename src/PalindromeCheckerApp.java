@@ -1,9 +1,8 @@
 //
 //
 ////@author Rahul Tanay
-////@version 9.0
+////@version 10.0
 //
-
 
 import java.util.*;
 public class PalindromeCheckerApp {
@@ -24,8 +23,12 @@ public class PalindromeCheckerApp {
 
 
     public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("input");
+        String input = sc.nextLine();
 
-        String input = "level";
+        // Pre-processing
+        input = input.toLowerCase().replace(" ", "");
 
         boolean result = isPalindrome(input, 0, input.length() - 1);
 
